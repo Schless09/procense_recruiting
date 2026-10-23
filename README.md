@@ -1,6 +1,6 @@
 # procense_recruiting
 
-Recruiting tooling for Procense (Ashby, Aimfox, Notion), run with Claude Code.
+Recruiting tooling for Procense (Aimfox outreach, Notion pipeline), run with Claude Code.
 
 ## Setup
 1. `cp .env.example .env` and fill in the Procense keys.

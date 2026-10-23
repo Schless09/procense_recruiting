@@ -1,7 +1,8 @@
 # Procense Recruiting
 
 I am the embedded recruiter for **Procense**. This repo holds my tooling for running
-Procense's hiring: filling and updating their Ashby, sourcing, and outreach.
+Procense's hiring: sourcing, outreach, and tracking candidates. Procense has no ATS, so
+the candidate pipeline lives in Notion.
 
 ## Ground rules for Claude
 - This repo is for **Procense only**. Never reference, reuse, or mix in candidates,
@@ -11,8 +12,8 @@ Procense's hiring: filling and updating their Ashby, sourcing, and outreach.
   pages/databases listed in `.env` (`NOTION_PROCENSE_*`). Do not touch any other page.
 - Candidate data (resumes, exports, notes) goes in `data/`, which is gitignored.
   Never commit candidate personal information.
-- Confirm with me before any action that writes to Ashby, sends outreach through
-  Aimfox, or changes a candidate's stage.
+- Confirm with me before any action that sends outreach through Aimfox, writes to the
+  Notion candidate pipeline, or changes a candidate's stage.
 
 ## Company
 - **What Procense does:** AI-powered software plus industrial-grade IoT for process
@@ -49,7 +50,6 @@ Procense's hiring: filling and updating their Ashby, sourcing, and outreach.
 ## Open roles
 
 ### Sr. Full Stack Software Engineer
-- Ashby job ID: TODO
 - Location: Hybrid, 3 days/week in San Francisco
 - Comp range: TODO
 - Scope: full stack. Shop-floor operator interfaces, AI-integrated tools for admins and
@@ -78,7 +78,6 @@ Procense's hiring: filling and updating their Ashby, sourcing, and outreach.
   own problem spaces end to end, AI meets industrial automation, close to customers.
 
 ### Founding Account Executive
-- Ashby job ID: TODO
 - Location: SF Bay Area, in office 3+ days/week. Travel about 25% (on-site with customers monthly)
 - Reports to: CEO. Builds the playbook with the CEO and the co-founder/head of GTM
 - Comp: OTE $240K to $300K, uncapped commission with accelerators, early-stage equity, full benefits
@@ -115,7 +114,6 @@ Procense's hiring: filling and updating their Ashby, sourcing, and outreach.
   and painful problem, big uncapped OTE.
 
 ### Business Development Representative
-- Ashby job ID: TODO
 - Location: SF Bay Area, in office **5 days/week** (no hybrid or remote)
 - Reports to: TODO (works directly with the CEO)
 - Comp: OTE $80K to $100K+ (base + commission), accelerated commissions above target,
@@ -149,10 +147,13 @@ Procense's hiring: filling and updating their Ashby, sourcing, and outreach.
 - **Selling points:** one of the first GTM hires, clear path to AE in a year, works directly with
   the CEO, visible impact, accelerated commissions, early equity.
 
-## Ashby setup
-- Pipeline stages (in order): TODO
-- Sources / tags I use: TODO
-- Custom fields: TODO
+## Candidate pipeline (Notion, no ATS)
+- Database: `NOTION_PROCENSE_CANDIDATES_DB_ID` in `.env`
+- Pipeline stages (in order): TODO (e.g. Sourced, Contacted, Replied, Screen, Submitted
+  to Procense, Interviewing, Offer, Hired, Rejected / Not interested)
+- Properties: TODO (e.g. Name, Role, LinkedIn URL, Email, Current company, Location,
+  Stage, Source, Last contact date, Notes)
+- How Procense sees candidates / how I submit them: TODO
 
 ## Outreach (Aimfox)
 - Campaign(s): TODO
@@ -160,10 +161,9 @@ Procense's hiring: filling and updating their Ashby, sourcing, and outreach.
 - Pitch: why someone should join Procense: see Culture and each role's selling points above
 
 ## Tools
-- **Ashby**: API docs https://developers.ashbyhq.com
 - **Aimfox**: LinkedIn outreach
-- **Notion**: shared integration, Procense pages only
+- **Notion**: candidate pipeline and notes. Shared integration, Procense pages only
 
 ## Repo layout
-- `scripts/`: automation scripts (Ashby, Aimfox, Notion)
+- `scripts/`: automation scripts (Aimfox, Notion)
 - `data/`: local candidate files and exports (gitignored)
